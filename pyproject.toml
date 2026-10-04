@@ -1,0 +1,23 @@
+[project]
+name = "human_in_loop"
+version = "0.1.0"
+description = "human_in_loop using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=1.15.22,<2.0.0"
+]
+
+[project.scripts]
+kickoff = "human_in_loop.main:kickoff"
+run_crew = "human_in_loop.main:kickoff"
+plot = "human_in_loop.main:plot"
+run_with_trigger = "human_in_loop.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "flow"
+project_id = "4cf1abf7-2015-4857-8c20-633efd46f22c"
